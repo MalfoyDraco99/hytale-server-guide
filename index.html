@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The (Un)-Official Hytale Server Guide</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0f0f0f;
+      color: #eaeaea;
+      line-height: 1.6;
+      max-width: 750px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h1, h2 {
+      color: #ffffff;
+    }
+
+    a {
+      color: #4da3ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    code {
+      background: #1e1e1e;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #333;
+      margin: 40px 0;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin: 20px 0;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>The (Un)-Official Hytale Server Guide</h1>
+  <p>This is a guide for people who can't read the real guide. Guide²!</p>
+  <p>This guide is made for Windows users, but should probably work for Linux.</p>
+  <p>Requirements:</p>
+  <p>A Decent PC (At minimum 16GB Of RAM + a goodish CPU)</p>
+  <p><p>Elevated Privileges (Having administrator on your pc, if your the only account on your pc. Dont worry about this)</p>
+  <p>The admin password for your router, if you don't know how to find it, you will find out later in this guide.</p>
+  <p>1/4 the intelligence of the average monkey.</p>
+  <p>The ability to be a good little boy and follow instructions.</p>
+  <hr>
+
+  <h2>Step 1: Downloading</h2>
+  <p>
+    Download the Hytale server downloader:
+    <a href="https://downloader.hytale.com/hytale-downloader.zip">
+      Click here to download
+    </a>
+    or, if you don’t trust me, google "Hytale Server Manual" and find the download there.
+  </p>
+
+  <h2>Step 2: Unzipping</h2>
+  <p>Open your downloads folder and unzip the downloaded folder.</p>
+  <img
+    src="https://www.wikihow.com/images/thumb/0/02/Unzip-a-File-Step-5-Version-2.jpg/v4-460px-Unzip-a-File-Step-5-Version-2.jpg"
+    alt="Unzipping a file example"
+  >
+  <h2>Step 3: Running the EXE</h2>
+  <p>In the unzipped folder, there should be a file named <code>hytale-downloader-windows-amd64.exe</code>. Double-click it to run.</p>
+
+  <h2>Step 4: Authenticating</h2>
+  <p>At this point, it will ask you to authenticate your Hytale account. Click the link it sends and enter the authentication code.</p>
+  <p>After you do this, it should download a zip, unzip it when the download is done. Inside it should be <code>Assets.zip</code> and a <code>Server</code> folder. Open the <code>Server</code> folder.</p>
+
+  <h2>Step 5: Downloading Java</h2>
+  <p>Download Java 25 by Adoptium: 
+    <a href="https://adoptium.net/temurin/releases">Here</a>
+  </p>
+  <p>After going to that link, press Java 25 - LTS, And click the download button under "Windows"</p>
+
+  <h2>Step 6: Installing Java </h2>
+  <p>Run the .msi installer and follow the instructions that it says, if there is an option called "<code>Add JAVA to PATH</code> or <code>Set JAVA_HOME variable</code>" make sure it is checked / enabled.</p>
+
+  <h2>Step 7: Enabling File Extensions</h2>
+  <p>Follow the images below, if you are not on windows 11 google how to do it. You're a big boy. I believe in you.</p>
+  <img
+    src="https://allthings.how/content/images/wordpress/2021/07/allthings.how-how-to-show-file-extension-in-file-explorer-on-windows-11-image-1.png"
+    alt="Enabling File Extensions 1"
+  >
+  <img
+    src="https://allthings.how/content/images/wordpress/2021/07/allthings.how-how-to-show-file-extension-in-file-explorer-on-windows-11-image-2.png"
+    alt="Enabling File Extensions 2"
+  >
+  <h2>Step 8: Creating start.bat</h2>
+  <p>Create the start.bat folder to start your server. Right click the empty space inside the <code>Server</code> folder Hover over "New" then press "New Text Document"</p>
+  <img
+    src="https://www.virtualcuriosities.com/wp-content/uploads/2024/12/windows-file-explorer-context-menu-new-submenu-20241211.webp"
+    alt="Creating start.bat"
+  >
+  <h2>Step 8.5: Creating start.bat</h2>
+  <p>Click the text document you created once, then press F2 on your keyboard, rename it to <code>start.bat</code></p>
+  <h2>Step 9: Writing start.bat</h2>
+  <p>Right click start.bat, hover over "Open With" and press "Notepad"</p>
+  <p>Insert the batch code below into the space you see, once done press CTRL + S on your keyboard</p>
+  <p><code>@echo off<br>java -jar HytaleServer.jar --assets ../Assets.zip<br>pause</code></p>
+  
+  <h2>Step 10: Running start.bat</h2>
+  <p>Double tap <code>start.bat</code> to run it, it should start up. If there are warnings, ignore them. If it displays this message at the end it was successful! Congrats!</p>
+  <p><code>[2026/01/15 16:13:08   INFO]                 [HytaleServer] =============================================================================================== <br>
+[2026/01/15 16:13:08   INFO]                 [HytaleServer]          Hytale Server Booted! [Multiplayer] took 9sec 564ms 418us 116ns <br>
+[2026/01/15 16:13:08   INFO]                 [HytaleServer] ===============================================================================================</code></p>
+  <h2>Step 11: Authenticating your server</h2>
+  <p>Run this command in your servers console <code>auth login device</code> and follow the steps it gives you.</p>
+  <p>NOTE: YOU WILL HAVE TO DO THIS STEP EVERY TIME YOU START YOUR SERVER!!</p>
+  <h2>Step 12: Finding Your IP </h2>
+  <p>Find your IP via visiting this website, It will be under <code>IPv4:</code>Remember these numbers, (or write them down), They are <bold>IMPORTANT</bold></p> 
+    <a href="https://whatismyipaddress.com/">Here</a>
+  <h2>Step 13: Port Forwarding - Router Gateway</h2>
+  <p>Here's when things get fun, and by fun, I mean semi complicated.</p>
+  <p>Type "cmd" into your windows search bar, then press enter, then type "ipconfig", then find the numbers highlighted in the image. The one that it is under will depend on what connection you are using.</p>
+    <img
+    src="  https://www.lifewire.com/thmb/8OSrjDELCXnaEQL5TyDDpFITo_8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/006_how-to-find-your-default-gateway-ip-address-2626072-5c65db644cedfd00014aa318.jpg"
+    alt="Finding default gateway"
+  >
+  
+  <h2>Step 13.5: Port Forwarding - Entering your ISP's Network Page</h2>
+  <p>Take the numbers under default gateway, and type them into your search bar on your search engine of choice, like your typing a link.</p>
+  <h2>Step 13.6: Port Forwarding - The Real stuff</h2>
+  <p>On the webpage, enter your admin credentials to your router. Usually found on a sticker on the back of your router, and then port forward port <code>5520</code>. If you are confused visit <a href="https://www.noip.com/support/knowledgebase/general-port-forwarding-guide">Here</a></p>
+  <h2>Step 14: Connecting to your server</h2>
+  <p>Remember those numbers from before? Your IPv4, give that to your friend and tell them to add the server to there server library in game (USING THE IPv4 AS THE IP THEY PUT IN), and press join</p>
+  <h2>Step 15: Oh Wait?</h2>
+  <p>This step isn't anything for you to do. It's something for me to do. Congratulations for setting up your first Hytale dedicated server successfully (assuming it works). If it doesn't look below for help / FAQ.</p>
+  <h2>FAQ / Support:</h2>
+  <p>Q: How do I stop my server? <br>A: Stop your server by running the <code>stop</code> command in your console. This is the healthiest way to do it that minimizes the chances of dataloss.</p>
+  <p>Q: My ISP doesn't let me port forward, can i still do this?<br>A: I hate to be the bearer of bad news here, but no you can't do this. It simply wont work.</p>
+  <p>Q: Why doesn't my server work? <br>A: I don't know and don't want to write every possible reason. Please contact me on discord. My username is <code>kentuckyfriedmalfoy</code></p>
+  
+</body>
+</html>
